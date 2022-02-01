@@ -32,7 +32,10 @@ footer,
 header {
   color: var(--base-font-color);
 }
-
+main {
+  width: 100%;
+  display: flex;
+}
 main a {
   color: var(--c-magenta);
 }
@@ -58,6 +61,7 @@ nav {
   flex-grow: 1;
   width: 100%;
   justify-content: space-between;
+
   flex-wrap: wrap;
 }
 nav ul {
