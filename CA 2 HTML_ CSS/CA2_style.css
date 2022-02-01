@@ -1,0 +1,83 @@
+:root {
+  --base-font-color: rgb(131, 148, 150);
+  --secondary-font-color: rgb(88, 110, 117);
+  --emphasised-font: rgb(147, 161, 161);
+
+  --c-background-color: rgb(0, 43, 54);
+  --c-background-highlights: rgb(7, 54, 66);
+
+  --c-yellow: rgb(181, 137, 0);
+  --c-orange: rgb(203, 75, 22);
+  --c-red: rgb(220, 50, 47);
+  --c-magenta: rgb(211, 54, 130);
+  --c-violet: rgb(108, 113, 196);
+  --c-blue: rgb(38, 139, 210);
+  --c-cyan: rgb(42, 161, 152);
+  --c-green: rgb(133, 153, 0);
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--c-background-color);
+  width: 800px;
+}
+header,
+footer {
+  background-color: var(--c-background-highlights);
+}
+
+main,
+footer,
+header {
+  color: var(--base-font-color);
+}
+
+main a {
+  color: var(--c-magenta);
+}
+a:hover {
+  color: var(--c-orange);
+}
+
+.first_subsection,
+.second_subsection {
+  border: 3px solid var(--c-cyan);
+}
+header {
+  text-align: center;
+  color: var(--c-yellow);
+  font-size: 150%;
+}
+nav ul li {
+  list-style-type: none;
+}
+
+nav {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: space-evenly;
+}
+aside {
+  color: var(--c-green);
+}
+
+aside a {
+  color: var(--c-red);
+}
+aside a:hover {
+  color: var(--c-blue);
+}
+
+article h2,
+h3 {
+  padding-top: 50px;
+}
