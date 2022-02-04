@@ -1,87 +1,118 @@
-:root {
-  --base-font-color: rgb(131, 148, 150);
-  --secondary-font-color: rgb(88, 110, 117);
-  --emphasised-font: rgb(147, 161, 161);
-
-  --c-background-color: rgb(0, 43, 54);
-  --c-background-highlights: rgb(7, 54, 66);
-
-  --c-yellow: rgb(181, 137, 0);
-  --c-orange: rgb(203, 75, 22);
-  --c-red: rgb(220, 50, 47);
-  --c-magenta: rgb(211, 54, 130);
-  --c-violet: rgb(108, 113, 196);
-  --c-blue: rgb(38, 139, 210);
-  --c-cyan: rgb(42, 161, 152);
-  --c-green: rgb(133, 153, 0);
-}
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
 }
+/* task numbers and description from the assignment is copy pasted, for reference purposes*/
+
+/* _____________________________Style-Start________________________________________________ */
+/*1.custom properties (or CSS variables) */
+:root {
+	--base-font-color: rgb(131, 148, 150);
+	--secondary-font-color: rgb(88, 110, 117);
+	--emphasised-font: rgb(147, 161, 161);
+
+	--c-background-color: rgb(0, 43, 54);
+	--c-background-highlights: rgb(7, 54, 66);
+
+	--c-yellow: rgb(181, 137, 0);
+	--c-orange: rgb(203, 75, 22);
+	--c-red: rgb(220, 50, 47);
+	--c-magenta: rgb(211, 54, 130);
+	--c-violet: rgb(108, 113, 196);
+	--c-blue: rgb(38, 139, 210);
+	--c-cyan: rgb(42, 161, 152);
+	--c-green: rgb(133, 153, 0);
+}
+/* -------------------------------------------------------------------------------- */
+/*  2. Set the background color of the page to `c-background-color`. */
+/* 12.Set the maximum width of the page to 800px. */
 body {
-  background-color: var(--c-background-color);
-  width: 800px;
+	background-color: var(--c-background-color);
+	max-width: 800px;
 }
+/*--------------------------------------------------------------------------------- */
+/*3.Set the background color of the header and footer to `c-background-highlights`. */
 header,
 footer {
-  background-color: var(--c-background-highlights);
+	background-color: var(--c-background-highlights);
 }
+/*------------------------------------------------------------------------------ */
+/* 4.Set the text color in the main, footer, and header to be `base-font-color`. */
+.baseFontColor {
+	color: var(--base-font-color);
+}
+/*----------------------------------------------------------------------------- */
 
-main,
-footer,
-header {
-  color: var(--base-font-color);
-}
+/* 14.Set the layout of the main content section such that the 
+'related links' portion is to the right of the article.  */
 main {
-  width: 100%;
-  display: flex;
+	width: 100%;
+	display: flex;
 }
-main a {
-  color: var(--c-magenta);
+/*------------------------------------------------------------------------- */
+/* 5.Links in the article should be c-magenta. */
+article a {
+	color: var(--c-magenta);
 }
+/* -----------------------------------------------------------------------*/
+/*6.When the mouse hovers over a link, it should be highlighted orange. */
 a:hover {
-  color: var(--c-orange);
+	color: var(--c-orange);
 }
-
+/*----------------------------------------------------------------------------- */
+/* 7.Create a border around each subsection of the article, 
+including the subsection heading. The border should be solid, 
+3px wide, and be `c-cyan` in color. */
 .first_subsection,
 .second_subsection {
-  border: 3px solid var(--c-cyan);
+	border: 3px solid var(--c-cyan);
 }
-header {
-  text-align: center;
-  color: var(--c-yellow);
-  font-size: 150%;
+/*----------------------------------------------------------------------------- */
+/* 8.Align the Header in the center, and set the text size to 150%. 
+The heading should be c-yellow. */
+#headerEl {
+	text-align: center;
+	color: var(--c-yellow);
+	font-size: 150%;
 }
-nav ul li {
-  list-style-type: none;
+/*----------------------------------------------------------------------------- */
+/* 9.Remove the bullet points from the unordered list in the nav section. */
+nav > ul > li {
+	list-style-type: none;
 }
 
+/*----------------------------------------------------------------------------- */
+/* 10.The nav bar needs to be the entire width of the page 
+in order for all items here to be displayed correctly */
 nav {
-  display: flex;
-  flex-grow: 1;
-  width: 100%;
-  justify-content: space-between;
-
-  flex-wrap: wrap;
+	width: 100%;
 }
+/*----------------------------------------------------------------------------- */
+/* 10.For the list items in the nav section list, align to the center, and 
+apply a flex layout. */
 nav ul {
-  display: flex;
-  flex-grow: 1;
-  width: 100%;
-  justify-content: space-evenly;
+	display: flex;
+	justify-content: space-around;
 }
+
+/*----------------------------------------------------------------------------- */
+/* 11.Color all text in the aside to c-green */
 aside {
-  color: var(--c-green);
+	color: var(--c-green);
 }
-
+/*----------------------------------------------------------------------------- */
+/* 11. All links in the aside should be c-red-- */
 aside a {
-  color: var(--c-red);
+	color: var(--c-red);
 }
+/*----------------------------------------------------------------------------- */
+/* --except when they are hovered over, when they should be c-blue. */
 aside a:hover {
-  color: var(--c-blue);
+	color: var(--c-blue);
 }
-
+/*----------------------------------------------------------------------------- */
+/* 13.All headings within the article should have a top padding of 50px. */
 article h2,
 h3 {
-  padding-top: 50px;
+	padding-top: 50px;
 }
+/* ________________________________Style-End_____________________________________________ */
