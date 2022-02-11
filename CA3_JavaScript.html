@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>ca3_final_file</title>
+	</head>
+	<body>
+		<main>
+			<section class="container">
+				<img id="birdImg" src="http://www.outgrabe.net/bird02.jpg" alt="White-headed Stilt" />
+
+				<p id="photoCredit">White-headed Stilt by JJ Harrison (CC-by-SA)</p>
+
+				<button id="bird00" PC="Pardalote by fir0002 (CC-by-NC)" onclick="changeBird(bird00)" altDescription="Pardalote">Pardalote</button>
+				<button id="bird01" PC="Purple swamp hen by Toby Hudson (CC-by-SA)" onclick="changeBird(bird01)" altDescription="Purple swamp hen">
+					Purple Swamp Hen
+				</button>
+				<button id="bird02" PC="White-headed Stilt by JJ Harrison (CC-by-SA)" onclick="changeBird(bird02)" altDescription="White-headed Stilt">
+					White-headed Stilt
+				</button>
+				<button id="bird03" PC="Inland Thornbill by Peter Jacobs (CC-by-SA)" onclick="changeBird(bird03)" altDescription="Inland Thornbill">
+					Inland Thornbill
+				</button>
+				<button id="bird04" PC="Rose Robin by JJ Harrison (CC-by-SA)" onclick="changeBird(bird04)" altDescription="Rose Robin">Rose Robin</button>
+			</section>
+		</main>
+	</body>
+	<script>
+		let photoCreditEl = document.getElementById("photoCredit");
+		let birdImgEl = document.getElementById("birdImg");
+
+		function changeBird(everyBtn) {
+			let bird_index = everyBtn.getAttribute("id");
+			let PC = everyBtn.getAttribute("PC");
+			let altText = everyBtn.getAttribute("altDescription");
+			birdImgEl.src = `http://www.outgrabe.net/${bird_index}.jpg`;
+			photoCreditEl.textContent = PC;
+			// I tried to change the alt description of the image as the buttons are clicked
+			birdImgEl.alt = altText;
+		}
+	</script>
+</html>
