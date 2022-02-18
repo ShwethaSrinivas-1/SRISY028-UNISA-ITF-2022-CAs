@@ -7,7 +7,7 @@
 }
 
 [data-theme="dark"] {
-	--primary-color: rgb(88, 95, 100);
+	--primary-color: rgb(66, 70, 73);
 	--secondary-color: rgb(115, 145, 168);
 	--bg-color: rgb(33, 33, 33);
 	--font-color: rgb(255, 255, 255);
