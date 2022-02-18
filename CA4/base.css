@@ -1,0 +1,33 @@
+:root {
+	--primary-color: rgb(252, 225, 252);
+	--secondary-color: rgb(99, 178, 204);
+	--bg-color: rgb(247, 239, 253);
+	--font-color: rgb(74, 79, 88);
+	--heading-color: rgb(160, 134, 240);
+}
+
+[data-theme="dark"] {
+	--primary-color: rgb(88, 95, 100);
+	--secondary-color: rgb(115, 145, 168);
+	--bg-color: rgb(33, 33, 33);
+	--font-color: rgb(255, 255, 255);
+	--heading-color: rgb(235, 10, 128);
+}
+
+body {
+	max-width: 850px;
+	background-color: var(--bg-color);
+	color: var(--font-color);
+}
+h1,
+h2,
+h3 {
+	color: var(--heading-color);
+}
+p {
+	background-color: var(--primary-color);
+	padding: 6px;
+}
+a {
+	color: var(--secondary-color);
+}
